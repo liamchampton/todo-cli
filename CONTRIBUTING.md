@@ -17,16 +17,18 @@ You can contribute in various ways, including:
 
 ## Getting Started
 
-This template repository is designed to work out-of-the-box in Codespaces with no setup required for the end user to get started.
+To setup this project for local development you will need the following:
 
-Please esure that any changes you make work seamlessly within a Codespaces environment.
+- [Go](https://golang.org/doc/install)
+- [Git](https://git-scm.com/downloads)
+
 
 ## Submitting Contributions
 
 To contribute to this project, follow these steps:
 
 1. Fork the repository on GitHub.
-2. Open your forked repository in Codespaces or clone your forked repository to your local machine but a local setup is required for this.
+2. Open your forked repository in Codespaces (devcontainer is provided) or clone your forked repository to your local machine but a local setup is required for this.
 3. Make the necessary changes.
 4. Commit your changes with a descriptive commit message.
 5. Push your branch to your forked repository.
@@ -58,4 +60,4 @@ Please adhere to these guidelines:
 
 ## License
 
-By contributing to this project, you agree to license your contributions under the [LICENSE](https://github.com/liamchampton/go-cli-template/blob/main/LICENSE) of the repository.
+By contributing to this project, you agree to license your contributions under the [LICENSE](https://github.com/liamchampton/todo-cli/blob/main/LICENSE)of the repository.
