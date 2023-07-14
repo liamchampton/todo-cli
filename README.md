@@ -1,71 +1,53 @@
-# go-cli-template
-This is a template that is designed to be used with GitHub Codespaces to get you up and running with your CLI project in a matter of minutes.
+# todo-cli
 
-This project is using https://github.com/spf13/cobra as a foundation.
+A simple command line todo list manager written in Go.
 
-## Getting started
+## Getting Started
 
-To get started, first you need to decide if you want to `fork` or `template` this repository. In simple terms, with a fork you will have a copy of this repository in your own GitHub account and you can make changes to it as you wish, as well as the ability to pull any updates made from this top level template repository. With a template, you will have a copy of this repository in your own GitHub account as it stands in its current form. You will be able to make changes to the code and make the project your own, but you will not be able to push those changes back to this template repository.
+### Running locally
 
-### Forking / Templating
-
-![Forking or templating](./assets/fork-or-template.png)
-
-### Creating a codespace
-
-Once you have your own copy of this repository, you can create a codespace by clicking the green `Code` button and selecting `New Codespace`.
-
-![Template codespace](./assets/template-button.png)
-
-OR
-
-![Codeing codespace](./assets/code-button.png)
-
-Once you have chosen your method, you will be presented with a screen that looks like this:
-
-![Codespace creation](./assets/codespace-setup.png)
-
-Wait for this to finish and you will be presented with a screen that looks like VSCode, but in your browser.
-
-Once this has opened you will need to wait just a moment longer for the post create command to finish setting up the environment. You will know this is done when you see the following in the terminal:
-
-![Post create command](./assets/post-create-command.png)
-
-Once this is done, you are ready to start coding!
-
-## Running out of the box
-run the commands:
+To run this locally, clone the repository and run the commands below:
 
 ```bash
 go build
-./go-cli-template
+./todo-cli
 ```
 
-## Commands
-
-So far there is only 1 command created, `example` and this can be seen within the `/cmd` directory.
-
-The pre-installed Cobra CLI tools can help make your project far more extensible with little work.
-
-To see the commands available with Cobra, run the command: 
+Before running the application, you need to run the command below to create the todo list `.yaml` file:
 
 ```bash
-cobra-cli -h
+touch $HOME/.todo-list.yaml 
 ```
+This will create a `.yaml` file in your home directory. This is where the todo list will be stored.
 
-This will show you the following output:
+### Adding a task
 
-![Cobra CLI help](./assets/cobra-cli.png)
-
-### Adding a new command
-
-Adding a new command at the root level is very easy to do, you just need to use the following command:
+To add a task run the command below:
 
 ```bash
-cobra-cli add <name of new command>
+./todo-cli add task-1 --description "finish the cli project" --deadline "30-07-2023"
 ```
 
-Once you have done this, navigate to the new command within the `/cmd` directory and edit the boilerplate code provided for your needs.
+### Listing tasks
 
-This is a basic foundation for you to build ontop of without the hassel of setup. Adding flags and subcommand palletes is bespoke to your own projet and information on how to do that can be found in the offical docs - https://pkg.go.dev/github.com/spf13/cobra#section-readme
+To list all tasks run the command below:
 
+```bash
+./todo-cli list
+```
+
+### Removing a task
+
+To remove a task run the command below:
+
+```bash
+./todo-cli remove task-1
+```
+
+### Updating a task
+
+To update a task run the command below:
+
+```bash
+./todo-cli update task-1 --description "finish the cli project before the end of next month" --deadline "30-08-2023"
+```
