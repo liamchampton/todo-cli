@@ -9,9 +9,9 @@ import (
 
 // exampleCmd represents the example command
 var exampleCmd = &cobra.Command{
-	Use:   "example",
-	Short: "This is an example commands",
-	Long:  `You can either modify this command or create a new one for your project`,
+	Use:   "init",
+	Short: "Create a new todo list file",
+	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 	},

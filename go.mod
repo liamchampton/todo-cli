@@ -1,4 +1,4 @@
-module go-cli-template
+module todo
 
 go 1.20
 

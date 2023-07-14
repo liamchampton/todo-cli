@@ -11,12 +11,9 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "go-cli-template",
-	Short: "Welcome to the go-cli-template!",
-	Long: `This is a template for a CLI application written in Go.
-
-All you need to do is change the name of the project "go-cli-template"
-to the name of your project and you are good to go!`,
+	Use:   "todo",
+	Short: "Welcome to the todo cli!",
+	Long:  ``,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -36,7 +33,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.go-cli-template.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.todo.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
